@@ -22,3 +22,15 @@ SPARTA is a mobile-first React app (TanStack Start v1 + React 19 + Vite 7 + Tail
 - Booking and campus screens must clearly state they show sample/demo data.
 - Date logic must be UTC-safe (see helpers in `src/lib/calendar-data.ts`); the demo week is September 2025 (Mon 22 – Fri 26, Thu 25 active).
 - Verify changes by running the app at phone and desktop widths and checking for runtime errors and horizontal overflow before declaring a task done.
+
+## Phase plan (from the product design document)
+
+- Phase 0 — Freeze the brief (done): name, palette, navigation, hero journey, demo data.
+- Phase 1 — Visual shell (done): mobile navigation, typography, colors, reusable cards, Home screen.
+- Phase 2 — Calendar foundation (done): day/week calendar, demo events, local add/edit/delete.
+- Phase 3 — Booking hero flow (done): Book → Writing Center → purpose → attachment → conflict-free times → confirmation → appointment inserted into the shared calendar data.
+- Phase 4 — Provider view: staff toggle, availability settings, today's appointments, same demo data.
+- Phase 5 — Syllabus prototype: upload UI + deterministic sample date extraction (no real AI on free tier).
+- Phase 6 — Campus polish: dining, map, events, orgs, health/library cards, mostly read-only.
+
+Phase rules: one shared calendar data source; booking confirmations create one event object the calendar and future provider view both reference. No database, auth, AI, or external integrations until a later phase adds them. No medical intake fields; health/counseling is safe routing only.
